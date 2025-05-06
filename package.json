@@ -1,0 +1,51 @@
+{
+  "name": "hedera-llm-agent",
+  "version": "1.0.0",
+  "description": "An AI agent that uses Hedera's consensus service to process and store LLM interactions",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "start": "ts-node src/hederaLLMCli.ts",
+    "basic": "ts-node src/hederaLLMAgent.ts",
+    "advanced": "ts-node src/hederaAIAgentKit.ts",
+    "cli": "ts-node src/hederaLLMCli.ts",
+    "dev": "tsc --watch",
+    "token-fetcher": "node dist/index.js",
+    "token-chat": "ts-node src/tokenChatCli.ts",
+    "hcs10-basic": "ts-node src/hcs10/examples/basicExample.ts",
+    "hcs10-request-response": "ts-node src/hcs10/examples/requestResponseExample.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "hedera",
+    "llm",
+    "ai",
+    "agent",
+    "blockchain",
+    "consensus",
+    "hcs",
+    "typescript"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@hashgraph/sdk": "^2.30.0",
+    "@hashgraphonline/standards-agent-kit": "^0.0.19",
+    "@types/readline-sync": "^1.4.8",
+    "axios": "^1.6.0",
+    "dotenv": "^16.3.1",
+    "langchain": "^0.0.150",
+    "mongoose": "^7.6.3",
+    "openai": "^4.97.0",
+    "readline-sync": "^1.4.10",
+    "uuid": "^9.0.1"
+  },
+  "devDependencies": {
+    "@types/mongoose": "^5.11.97",
+    "@types/node": "^20.8.9",
+    "@types/uuid": "^9.0.7",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.2.2"
+  }
+}
